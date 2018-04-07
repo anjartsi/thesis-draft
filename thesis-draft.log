@@ -1,0 +1,476 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.10)  7 APR 2018 12:01
+entering extended mode
+**./thesis-draft.tex
+(thesis-draft.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 75 language(s) loaded.
+(CSUNthesis.cls
+Document Class: CSUNthesis 2006/04/26 2.2 CSU Northridge
+-- CSUN Thesis style
+-- Author: Wiegley, Jeff, jeffw@csun.edu
+-- Please contact the author to have any mistakes corrected.
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty"
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+\titlewidth=\skip41
+\frontmattertopmargin=\skip42
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip43
+\belowcaptionskip=\skip44
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\ulem\ulem.sty"
+\UL@box=\box26
+\UL@hyphenbox=\box27
+\UL@skip=\skip45
+\UL@hook=\toks14
+\UL@height=\dimen103
+\UL@pe=\count88
+\UL@pixel=\dimen104
+\ULC@box=\box28
+Package: ulem 2012/05/18
+\ULdepth=\dimen105
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+))
+\@input{listings-package.aux}
+\openout2 = `listings-package.aux'.
+
+(listings-package.tex
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+\lst@mode=\count89
+\lst@gtempboxa=\box29
+\lst@token=\toks16
+\lst@length=\count90
+\lst@currlwidth=\dimen106
+\lst@column=\count91
+\lst@pos=\count92
+\lst@lostspace=\dimen107
+\lst@width=\dimen108
+\lst@newlines=\count93
+\lst@lineno=\count94
+\lst@maxwidth=\dimen109
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count95
+\lst@skipnumbers=\count96
+\lst@framebox=\box30
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen110
+\Gin@req@width=\dimen111
+)
+(thesis-draft.aux)
+\openout1 = `thesis-draft.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 13.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count97
+\scratchdimen=\dimen112
+\scratchbox=\box31
+\nofMPsegments=\count98
+\nofMParguments=\count99
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count100
+\MPscratchDim=\dimen113
+\MPnumerator=\count101
+\makeMPintoPDFobject=\count102
+\everyMPtoPDFconversion=\toks18
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 13.
+ [1
+
+
+
+{C:/Users/aourf/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 13.
+ (thesis-draft.toc)
+\tf@toc=\write3
+\openout3 = `thesis-draft.toc'.
+
+
+[3
+
+]
+\oldbaselineskip=\skip46
+ (section-abstract.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+[4]
+\c@lstlisting=\count103
+ (section-introduction.tex
+Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--64
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--64
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--64
+
+ []
+
+[1
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 90--102
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 103.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
+ [2])
+(section-literature-review.tex [3]
+Chapter 2.
+) (section-analysis-and-requirements.tex [4
+
+]
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--30
+
+ []
+
+[5
+
+]) (section-development-process.tex [6]
+Chapter 4.
+[7
+
+]) (section-tools-and-technologies.tex [8]
+Chapter 5.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 37.
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 12--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--40
+
+ []
+
+(code-snippets/example.vue
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 1.
+ [9
+
+])
+LaTeX Font Info:    Try loading font information for OMS+pcr on input line 52.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omspcr.fd"
+File: omspcr.fd 
+)
+LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--75
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 76--97
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--97
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--129
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--129
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--129
+
+ []
+
+[11]) (section-guide.tex [12]
+Chapter 6.
+<images/home-screen.png, id=60, 900.36375pt x 683.55376pt>
+File: images/home-screen.png Graphic file (type png)
+<use images/home-screen.png>
+Package pdftex.def Info: images/home-screen.png  used on input line 20.
+(pdftex.def)             Requested size: 285.56694pt x 216.81pt.
+<images/second-nav.png, id=62, 1014.79124pt x 44.41594pt>
+File: images/second-nav.png Graphic file (type png)
+<use images/second-nav.png>
+Package pdftex.def Info: images/second-nav.png  used on input line 39.
+(pdftex.def)             Requested size: 433.62pt x 18.97852pt.
+<images/file-menu.png, id=63, 124.21407pt x 94.85437pt>
+File: images/file-menu.png Graphic file (type png)
+<use images/file-menu.png>
+Package pdftex.def Info: images/file-menu.png  used on input line 60.
+(pdftex.def)             Requested size: 124.21375pt x 94.85413pt.
+<images/example-menu.png, id=64, 208.52907pt x 152.06813pt>
+File: images/example-menu.png Graphic file (type png)
+<use images/example-menu.png>
+Package pdftex.def Info: images/example-menu.png  used on input line 70.
+(pdftex.def)             Requested size: 208.52855pt x 152.06775pt.
+<images/edit-mode.png, id=65, 310.91156pt x 51.94406pt>
+File: images/edit-mode.png Graphic file (type png)
+<use images/edit-mode.png>
+Package pdftex.def Info: images/edit-mode.png  used on input line 82.
+(pdftex.def)             Requested size: 310.91078pt x 51.94392pt.
+<images/solve-mode.png, id=66, 309.40594pt x 51.19125pt>
+File: images/solve-mode.png Graphic file (type png)
+<use images/solve-mode.png>
+Package pdftex.def Info: images/solve-mode.png  used on input line 86.
+(pdftex.def)             Requested size: 309.40518pt x 51.19112pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--100
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13
+
+ <./images/home-screen.png>] [14 <./images/second-nav.png> <./images/file-menu.
+png> <./images/example-menu.png>]) (section-conclusions.tex [15 <./images/edit-
+mode.png> <./images/solve-mode.png>]
+Chapter 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--8
+
+ []
+
+) (thesis-draft.bbl [16
+
+]
+Underfull \hbox (badness 3482) in paragraph at lines 4--7
+[]\OT1/ptm/m/n/10.95 Angular vs. Re-act vs. Vue: A 2017 com-par-i-son .  https:
+//medium.com/unicorn-
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¶ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no Ÿ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¶ in font ptmr7t!
+) [17
+
+] (thesis-draft.aux) ) 
+Here is how much of TeX's memory you used:
+ 3197 strings out of 493305
+ 46425 string characters out of 3138874
+ 118979 words of memory out of 3000000
+ 6662 multiletter control sequences out of 15000+200000
+ 14134 words of font info for 36 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,7n,42p,321b,1512s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb
+8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis-draft.pdf (21 pages, 219325 bytes).
+PDF statistics:
+ 116 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,156 @@
+\chapter{Tools and Technologies}
+\label{tools-and-technologies}
+I am going to assume the reader has a basic understanding of HTML, CSS, and JavaScript.
+When I first began working on this project, I made the decision to work in plain 
+JavaScript, but I quickly realized that using a framework would allow me to focus 
+on the more interesting parts of the project (how to visualize algorithms) without 
+having to spend hours on the smaller problems 
+(how to update dozens of elements on a page whenever a part of the data model changes).
+So I chose to use Vue.js for my project. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Vue js}
+\hspace{-0.25in}Vue was released in February 2014, by Evan You  \cite{vue-launch}. 
+It is an open source JavaScript framework
+for creating Single-Page Applications, but 
+it can also be easily incorporated into an existing project. 
+The two main features of Vue are creating reactive web pages, and components.
+\newline\newline
+For a web page to be \textbf{reactive}, it needs to respond to changes. This means
+that various elements of the web page have to re-render themselves, whenever
+parts of the data model change, and conversely the data model has to update whenever
+a user interacts with the web page. 
+This can be achieved in plain JavaScript by manually manipulating the elements
+when the data model changes and using event listeners to handle user interactions, 
+but it is very tedious, error-prone, and inefficient. 
+Vue utilizes a virtual DOM (Document-Object Model) to efficiently 
+render web pages and re-render only the parts of a page
+that need to respond to changes in the data model, 
+with minimal effort by the developer (me).
+\newline\newline
+The other key feature provided by Vue is \textbf{components}, which are 
+self-contained parts of an application. 
+Components are reusable, can be nested inside one another, and inherit from one another.
+This makes Vue great for separating different tasks and responsibilities
+of a program in an organized way. 
+Vue uses a \textbf{template} syntax for its components, where each component 
+has an HTML, CSS, and JavaScript portion. These can all be placed in the same file 
+(but divided into \texttt{<template>}, \texttt{<style>}, and \texttt{<script>} sections respectively),
+or each can go into a separate file. 
+This template syntax was the biggest reason I chose Vue over alternative frameworks.
+
+Below is an example of a Vue component.
+%
+\lstinputlisting[
+	caption = {Example Vue Component},
+	label = {example.vue},
+	style = {line-numbers}
+	]{code-snippets/example.vue}
+%
+In the above example, the code between the  \texttt{<template>} tags 
+is the HTML code, where the various elements are drawn on the web page.
+The only new Vue-specific concepts in this section are on lines 5, 6, and 7. 
+On line 5, the \texttt{\{\{~num~\}\}} inside the \texttt{<p>} tags will be replaced by 
+value of the \texttt{num} (see next paragraph) variable associated with this Vue component.
+The \texttt{@click}s on lines 6 and 7 define what function is called 
+when the user clicks on either button. 
+The functions must be defined for this Vue component (again, see next paragraph). 
+\newline\newline 
+The code between the \texttt{<script>} tags is the JavaScript code,
+where the data and functionality is defined. Here, the value for \texttt{num}
+is initialized to zero (line 16), and the two functions called 
+\texttt{increment} and \texttt{decrememnt} (lines 20 and 23)
+increase or decrease the value of \texttt{num} by one. 
+When either button gets pressed, these functions are called, 
+the value of \texttt{changes}, 
+and the text inside the \texttt{<p>} tag is updated and re-rendered automatically.
+\newline\newline
+The code in the \texttt{<style>} tags is the CSS, where the 
+elements' style, size, and positioning are set. 
+The \texttt{scoped} keyword tells Vue that any style rules written here will not affect
+any other components. This greatly reduces the complexity of styling large applications. 
+Furthermore, when global style rules are required, they can be placed in the top-level 
+component with the \texttt{scoped} keyword removed, and those rules will trickle 
+down to all the nested components. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Alternatives to Vue}
+\hspace{-0.25in}The two most popular alternatives to Vue are React and Angular 
+\cite{angular-react-vue}. 
+Both of these frameworks are older than Vue, and they are used and maintained by 
+tech Giants Facebook and Google respectively. 
+In this section I will briefly compare and contrast Vue with these frameworks and 
+discuss why I chose to use Vue over either of them. 
+\newline\newline
+React and Vue are very similar: 
+they both use reusable components to separate the program into self-contained units,
+and they both utilize the Virtual DOM to create reactive webpages. 
+But unlike Vue, where the HTML code is separated from the JavaScript,
+React combines the two together using JSX
+(an XML-like syntax for writing HTML code directly into JavaScript functions). 
+The reason I chose Vue over React was because I found the JSX syntax to be 
+much harder to follow than Vue's template syntax.
+\newline\newline
+Vue was inspired by Angular, so the two frameworks have a very similar syntax.
+But Angular is aimed at projects with much bigger scope than mine, 
+and has a steeper learning curve \cite{angular-react-vue}.
+I chose Vue over Angular because it is more lightweight Angular \cite{vue-comparison}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Vuex}
+\hspace{-0.26in}
+Vue allows for top-level components to send data (or bind variables) down to any components that are 
+nested within them. However, this data binding is only one-way, so the inner components
+cannot send data back up to their parents. 
+Vue provides a way to achieve this with events:
+child components can emit events that their parents listen for, and can respond to.
+Although this is functionally equivalent to having two-way data binding, it becomes much more verbose. 
+Furthermore, the verbosity is compounded when sibling components 
+(or worse yet, when elements that are much further apart in the tree)
+need to communicate with one another. 
+This is the reason I added \textbf{Vuex} \cite{vuex} to my project. 
+\newline\newline
+Vuex is a state-management library for Vue. It moves the responsibility of keeping track of 
+data away from the components into a \textbf{store} whose sole purpose is to manage the data
+in a structured way. A Vuex store is made up of a \textit{state}, \textit{mutations}, and \textit{actions} (there are other parts to Vuex stores like \textit{getters}, \textit{modules}, and \textit{plugins}, but I will not discuss them here).
+\newline\newline
+The \textit{state} is where all the data is kept for the entire application. 
+This data can be accessed by any of the Vue components, 
+but it can \underline{not} be modified by any of the Vue components. 
+The only way to modify any data held in the state is to use \textit{mutations}. 
+Mutations are functions that modify the state. 
+\textit{Actions} are used as an interface between Vue and Vuex. 
+Actions are functions that are ``dispatched'' from Vue components, 
+and their main task is to invoke (``commit'') the mutations.
+\newline\newline
+I utilize Vuex for my project by creating a different store for each algorithm:
+the \textit{state} holds all the information about the problem instance, 
+the \textit{mutations} holds all the operations to edit the instance 
+as well as all the operations that will be done to run the algorithm, 
+and the \textit{actions} correspond to various tasks the user may wish to perform.
+As an example, the Vuex store for \textsc{Stable Marriage} has the following: 
+\begin{itemize}
+	\item state
+	\begin{itemize}
+		\item Two $n \times n$ arrays where the preferences of the men and women are kept
+		\item An $n \times n$ array of rejections (which women have rejected which men)
+		\item A list ($0\leq length \leq n$) to keep track of what tentative matchings currently exist. 
+	\end{itemize}
+	\item mutations
+	\begin{itemize}
+		\item \texttt{swapPreferenceBoxes}: reorder the preference array
+		\item \texttt{propose}: a man makes a proposal to a woman
+		\item \texttt{acceptProposal}: the woman accepts the proposal
+		\item \texttt{rejectProposal}: the woman rejects the proposal
+		\item \texttt{resetSolver}: reset the algorithm to start from the beginning
+	\end{itemize}
+	\item actions
+	\begin{itemize}
+		\item \texttt{proposeDispose}: This is called when the user clicks a particular button in the solver
+							to run a single step of the Gayle-Shapely algorithm.
+		\item \texttt{loadFile}: This is called when the user loads a text file instead of manually 
+							editing the problem instance. 
+	\end{itemize}
+\end{itemize}
+Using Vuex to handle state management removes that responsibility from the Vue components,
+making their sole responsibility to create a display. 
+This separation of responsibilities not only makes the Vue components more reusable
+it also makes the runtime process of each algorithm easier to 
+implement, debug, and test.

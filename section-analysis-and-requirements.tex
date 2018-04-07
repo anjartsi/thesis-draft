@@ -1,0 +1,80 @@
+\chapter{Requirements} 
+\label{analysis-and-requirements}
+%The requirements for this project were derived from a combination of 3 sources:
+%\begin{itemize}
+%	\item My personal experience as a high school teacher
+%	\item Conversations with Professor Noga about what features he would like
+%	\item The results of the studies discussed in 
+%		\hyperref[literature-review]{\textbf{Section \ref{literature-review} Literature Review}}
+%\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The requirements for this project were derived from a combination of three sources. 
+First, I relied on my personal experience as a former teacher: 
+I have taught Math and Science at the high school level, 
+and would often incorporate technology into my lectures 
+partly because I'm not good enough at drawing, 
+and also because the students responded better to anything that was on a screen. 
+\newline\newline
+The second source for these requirements came from Professor Noga's input
+since he is the faculty member who most frequently teaches Algorithms, 
+I discussed with him how he approaches teaching each algorithm, what would be a 
+useful feature of the app to be used during lecture, 
+what maximum or minimum conditions need to be met by the app, and
+what are some interesting instances that can stimulate in-class discussions. 
+\newline\newline
+Finally, I incorporated as much of what I learned from my research
+(discussed in Chapter \ref{literature-review}, Literature Review)
+to create an AV tool that would improve student learning. 
+For example, AV's that allow the user to create their own instances 
+and run te algorithm step by step are much more effective. 
+\section{Requirements}
+\label{requirements}
+\begin{enumerate}
+	\item Create a web-app for Algorithm Visualization 
+	\begin{enumerate}
+		\item The app will be a Single-Page Application
+		\item The app will run in the front-end 
+		\item The app will run in the Google Chrome web browser
+	\end{enumerate}
+	\item The target users of The app will be CSUN faculty 
+	who are teaching an intermediate-level 
+	algorithms class (such as Comp 482)
+	\item The app must be easy to use by its target users
+	\begin{enumerate}
+		\item Users should be able to interact with the app with 
+			little to no formal training
+		\item Where necessary, the app must provide instructions on 
+			any controls that do not meet the above criteria
+	\end{enumerate}
+	\item The app will provide AV's for 3-5 algorithms 
+		covered in such a class, including: 
+		\begin{enumerate}
+			\item Stable Matching
+			\item Interval Scheduling (unweighted)
+			\item Closest Pair of Points
+		\end{enumerate}
+	\item For each algorithm, an AV will have the following:
+	\begin{enumerate}
+		\item An interface to create/modify instances of the problem
+		\begin{enumerate}
+			\item User controls displayed on the webpage (text boxes, buttons, etc.)
+			\item Loading an instance from a .txt file
+			\item Saving an instance into a .txt file
+			\item Loading an instance from a database
+		\end{enumerate}
+		\item An interface to solve the created instances (ie run the algorithm)
+		\begin{enumerate}
+			\item Perform a single step of the algorithm at a time
+			\item Perform the entire algorithm automatically.
+		\end{enumerate}
+		\item A visual diagram of an instance of the problem
+		\begin{enumerate}
+			\item The diagram must be organized and easy to understand
+			\item The diagram must be appropriately sized to be displayed
+				on a projector in front of students
+			\item The display must update as the solver is performing the algorithm
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+%\subsection{Analysis and Architecture}
+%(in progress)

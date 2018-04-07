@@ -1,0 +1,131 @@
+\chapter{Introduction} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Motivation}
+When I was a high school Math and Science teacher,
+I often tried to employ the use of technology in the classroom. 
+I often found it to be a good way to spend less class-time on tasks that do not 
+engage the student. An example of such a task is drawing a graphs (in Algebra class):
+while I was busy drawing the diagram, students would not engaged in the lesson.
+\newline\newline
+So I started preparing graphs on a computer to display over a projector, and saved.
+valuable minutes of engaging class time, 
+and a side benefit of using computer-generated images was that they looked far better
+than any graph I could have drawn by hand. 
+The only problem with this solution was that 
+I had to spend more of my own time outside of class to create these visuals, or find
+some online.
+\newline\newline
+Due to my background as a teacher, 
+I was drawn towards a thesis project where I could create 
+an educational tool to be used in a classroom 
+to help instructors draw diagrams and display them 
+over a projector instead of having to draw them on the whiteboard.
+The overall goal of this project is to create a tool that will save time in class 
+by reducing the teacher's non-engaging tasks, while not requiring too much of the 
+teachers' time outside of class for preparation. For the subject matter, I chose 
+Algorithm Visualization.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Background}
+\label{introduction}
+Algorithms are a fundamental part of Computer Science education. 
+Just about every introductory CS class discusses the various sorting algorithms, 
+their advantages and disadvantages, followed by some video that graphically 
+shows how each sorting algorithm is implemented
+%such as [\ref{sorting-out-sorting}]
+\newline\newline
+Algorithm Visualization (AV) is the use of software 
+to create diagrams, animations, and other visual tools 
+to facilitate the learning of an algorithm, 
+its process (how it works and why it produces the correct result), 
+and its complexity (runtime, required space, etc).
+There is an abundance of visualizations for sorting algorithms,
+and a decent amount for other introductory algorithms or data structures
+(Binary Search Trees, Linked Lists, Kruskal's Algorithm, Primm's Algorithm, etc.),
+but fairly few and far between for the more intermediate-level algorithms. 
+\newline\newline
+Studies have shown the positive effects of various AV's 
+(see {\textbf{Chapter \ref{literature-review} Literal Review}}),
+and yet they are seldom used as part of the teaching process.
+AV can provide advantages to instructors because it allows them to 
+display complex diagrams or data structures without having to draw them, 
+which not only saves class time for more engaging activities, but also
+allows instructors to go over examples that are 
+much too complex to draw by hand, such as a graph with more than 20 vertices, 
+or a 2-dimensional grid containing 500 points. 
+Furthermore, AV is helpful to students because it gives them a chance to 
+review the lesson outside of class, reproducing the problem on their own
+and giving them access to guided practice. 
+\newline\newline
+The Objectives for this project were influenced by the advantages discussed in the previous paragraph. 
+These objectives outline the goals of the project as a whole but 
+a more detailed list of requirements can be found in
+\textbf{Chapter \ref{requirements} Requirements}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Objectives}
+\begin{enumerate}
+	\item Create an AV tool to be used by CSUN Faculty 
+		teaching an intermediate Algorithms class during lecture
+		\begin{enumerate}
+			\item Algorithms covered by this project will be drawn from 
+				those taught in Comp 482
+			\item The main use case is on a projector display as part of a lecture
+		\end{enumerate}
+	\item The tool must be intuitive and easy to use
+		\begin{enumerate}
+			\item Users should be able to use the tool with little or no 
+				formal training
+			\item Using the tool to create diagrams should take no more time 
+				than drawing a similar diagram by hand
+		\end{enumerate}
+	\item The tool will have the following features:
+	\begin{enumerate}
+		\item Allow the user to create instances of a given problem
+		\item Allow the user to simulate the steps of an algorithm 
+			and see the solution
+		\item Display visuals to describe how the algorithm is running
+	\end{enumerate}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{My Approach}
+\hspace{-0.25in}The ultimate goal of this project is to create a tool that will actually be used 
+in the classroom. The target users are CSUN faculty, and the target environment 
+is in a classroom during lecture.
+I kept this in mind when I was planning, designing, and testing my project. 
+Whenever a decision had to be made between 
+making the tool more universally applicable 
+versus making the tool a better fit for the specific target audience,
+I chose the latter. For example: that is why I chose 
+specific lessons that were covered in CSUN's Comp 482 class.
+\newline\newline
+In order to make the the tool easily accessible (by faculty as well as students), 
+it was designed as a web app, more precisely as a front-end single-page application:
+\begin{itemize}
+	\item Front-end: the app runs on the client's local machine
+	\item Single-Page application: when the user interacts with the app,
+		it changes the page dynamically without having to reload or refresh 
+	\item Application: computer program that accomplishes some task
+\end{itemize}
+Each algorithm within the app is a self-contained module 
+(ie does not rely on other modules) 
+comprised of 
+\begin{itemize}
+	\item An \textsc{Instance Maker}: allows the user to create 
+		instances of a given problem.
+	\item A \textsc{Solver}: allows the user to run the algorithm.
+	\item A \textsc{Display}: allows the user to see the various aspects
+		of the problem while the algorithm is being performed.
+\end{itemize} 
+I used a JavaScript framework called Vue with an MVC approach.
+I chose Vue because it is a relatively new framework and 
+its popularity is on the rise \cite{top-js-libraries}
+Furthermore, I used a popular Vue library called Vuex, which is 
+a state-management library \cite{vue}
+I hosted the app on Heroku, because they offer free hosting for hobby-level apps. 
+The app can currently be accessed by going to the following webpage:
+\begin{center}
+
+https://fun-with-algorithms.herokuapp.com
+	
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Revisit the Intro after writing the other sections

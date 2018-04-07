@@ -1,0 +1,53 @@
+\chapter{Development Process}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Since I was working by myself on this project, I did not adopt 
+a formal development process, but it was iterative, with multiple deliveries, 
+and continued improvement. The nature of this project is very modular.
+It consists of various algorithms which do not rely on one another.
+Thus I worked on each algorithm individually 
+from conception to completion and published it to the live website 
+before moving on to the next algorithm. 
+The process of creating an AV for a given problem went (roughly) as follows:
+\begin{itemize}
+	\item Decide acceptable ranges and restrictions for inputs and problem size
+	\begin{itemize}
+		\item These restrictions ensure that the app will run smoothly and not
+			slow down
+		\item The restrictions also make sure the visualization is 
+			easy to understand, and fits on the target screen size
+		\item The ranges should be larger than if the problem were being 
+			solved by hand
+	\end{itemize}
+	\item Create the data model
+	\begin{itemize}
+		\item What data structures are required for a given type of problem
+		\item What properties and methods are required to run an algorithm
+		\item Which parts of the data should be made available to the display
+	\end{itemize}
+	\item Create the \textsc{Instance Maker}
+	\begin{itemize} 
+		\item User interface (text fields, buttons, sliders, etc.) to 
+			construct an instance manually
+		\item Save/Load interface through which the user can upload/download
+			a text file to create an instance
+		\item Predefined example instances that can be loaded without 
+			manually being inputted (this is a nice-to-have)
+		\item Update the data model as the user makes changes to the problem instance
+	\end{itemize}
+	\item Create the \textsc{Display}
+	\begin{itemize}
+		\item Visual components that represent the data model
+		\item Must respond to changes in the data model
+	\end{itemize}
+	\item Create the \textsc{Solver}
+	\begin{itemize}
+		\item User interface to run the given algorithm
+		\item Update the data model as the algorithm is performed
+	\end{itemize}
+	\item Show Professor Noga the progress
+	\begin{itemize}
+		\item Discuss various decisions/restrictions/compromises made
+			and whether they are acceptable
+		\item Make any necessary changes
+	\end{itemize}
+\end{itemize}
