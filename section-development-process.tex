@@ -1,14 +1,59 @@
 \chapter{Development Process}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Since I was working by myself on this project, I did not adopt 
-a formal development process, but it was iterative, with multiple deliveries, 
-and continued improvement. The nature of this project is very modular.
-It consists of various algorithms which do not rely on one another.
+a formal development process, 
+but my development process has been iterative, with continuous deliveries, 
+and continued improvement. The nature of this project is very modular:
+it consists of various algorithms which do not rely on one another.
 Thus I worked on each algorithm individually 
-from conception to completion and published it to the live website 
-before moving on to the next algorithm. 
+from conception to completion, published it to the live website 
+and then I moved on to the next algorithm. 
 The process of creating an AV for a given problem went (roughly) as follows:
+\section{Choosing which Algorithms to Cover}
+
+The pool of algorithms I chose from for this project
+is those taught in Comp 482 at CSUN. 
+Since the goal of this project is to create a tool to be used by CSUN faculty,
+it makes sense to create AV's for algorithms already taught at CSUN. 
+\newline\newline
+\newline\newline
+I chose \textbf{Interval Scheduling} for a number of reasons. 
+First and foremost, it is taught very early in the semester so 
+it can students are inexperienced.
+Secondly, it is a Greedy Algorithm, and it drives a conversation
+about what makes an algorithm greedy:
+students suggest different greedy solutions to the problem 
+(take the shortest interval first,
+take the interval with the least number of overlaps first, etc.)
+while the professor proves or disproves each suggested solution. 
+Oftentimes the professor has to use a counterexample to disprove 
+students' attempted solutions, and this is where an AV would be useful.
+\newline\newline
+Another reason I chose this algorithm was because students often 
+misunderstand the problem, especially the part where the intervals 
+are all weighted equally (the length of an interval does not matter, 
+it is the total number of intervals that need to be maximized).
+Since the problem is introduced as 
+"imagine you have a resource that many people want to use ..."
+some students tend to think they must fill up as much time as possible 
+in order to make efficient use of the resource
+(while other students think they must fill up as little time as possible
+to avoid wear-and-tear on the resource). 
+This creates a situation where the teacher correcting the first group's
+misunderstanding only reinforces the belief of the second group and vice versa.
+For this reason, when creating the Interval Scheduling AV, this app
+specifically provides a counter labeled "Intervals in Solution", which 
+the teacher can point to and say "This is the number we want to maximize, nothing else!"
+\newline\newline
+
 \begin{itemize}
+	\item Think about the problem in question
+	\begin{itemize}
+		\item What is the formal definition
+		\item How is it introduced in lecture
+		\item How is it performed as part of homework/test/lecture
+		
+	\end{itemize}
 	\item Decide acceptable ranges and restrictions for inputs and problem size
 	\begin{itemize}
 		\item These restrictions ensure that the app will run smoothly and not

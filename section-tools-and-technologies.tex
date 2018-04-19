@@ -37,7 +37,7 @@ has an HTML, CSS, and JavaScript portion. These can all be placed in the same fi
 (but divided into \texttt{<template>}, \texttt{<style>}, and \texttt{<script>} sections respectively),
 or each can go into a separate file. 
 This template syntax was the biggest reason I chose Vue over alternative frameworks.
-
+\newline\newline
 Below is an example of a Vue component.
 %
 \lstinputlisting[
@@ -50,25 +50,26 @@ In the above example, the code between the  \texttt{<template>} tags
 is the HTML code, where the various elements are drawn on the web page.
 The only new Vue-specific concepts in this section are on lines 5, 6, and 7. 
 On line 5, the \texttt{\{\{~num~\}\}} inside the \texttt{<p>} tags will be replaced by 
-value of the \texttt{num} (see next paragraph) variable associated with this Vue component.
+value of the \texttt{num} variable associated with this Vue component (see next paragraph).
 The \texttt{@click}s on lines 6 and 7 define what function is called 
 when the user clicks on either button. 
 The functions must be defined for this Vue component (again, see next paragraph). 
 \newline\newline 
 The code between the \texttt{<script>} tags is the JavaScript code,
-where the data and functionality is defined. Here, the value for \texttt{num}
+where the data and functionality are defined. Here, the value for \texttt{num}
 is initialized to zero (line 16), and the two functions called 
 \texttt{increment} and \texttt{decrememnt} (lines 20 and 23)
 increase or decrease the value of \texttt{num} by one. 
 When either button gets pressed, these functions are called, 
-the value of \texttt{changes}, 
+the value of \texttt{num} changes, 
 and the text inside the \texttt{<p>} tag is updated and re-rendered automatically.
 \newline\newline
 The code in the \texttt{<style>} tags is the CSS, where the 
 elements' style, size, and positioning are set. 
 The \texttt{scoped} keyword tells Vue that any style rules written here will not affect
-any other components. This greatly reduces the complexity of styling large applications. 
-Furthermore, when global style rules are required, they can be placed in the top-level 
+other components. This greatly reduces the complexity of styling large applications
+because the style rules for each component is located within the component itself. 
+And when global style rules are required, they can be placed in the top-level 
 component with the \texttt{scoped} keyword removed, and those rules will trickle 
 down to all the nested components. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -76,23 +77,25 @@ down to all the nested components.
 \hspace{-0.25in}The two most popular alternatives to Vue are React and Angular 
 \cite{angular-react-vue}. 
 Both of these frameworks are older than Vue, and they are used and maintained by 
-tech Giants Facebook and Google respectively. 
+tech giants Facebook and Google respectively. 
 In this section I will briefly compare and contrast Vue with these frameworks and 
 discuss why I chose to use Vue over either of them. 
 \newline\newline
 React and Vue are very similar: 
-they both use reusable components to separate the program into self-contained units,
+they both use reusable components to separate a program into self-contained units,
 and they both utilize the Virtual DOM to create reactive webpages. 
 But unlike Vue, where the HTML code is separated from the JavaScript,
 React combines the two together using JSX
 (an XML-like syntax for writing HTML code directly into JavaScript functions). 
-The reason I chose Vue over React was because I found the JSX syntax to be 
+The main reason I chose Vue over React was because I found using JSX to be 
 much harder to follow than Vue's template syntax.
 \newline\newline
-Vue was inspired by Angular, so the two frameworks have a very similar syntax.
+Vue was inspired by Angular, so the two frameworks have a very similar syntax 
+.or example: there is a command in Angular called \texttt{ng-if},
+and its counterpart in Vue is called \texttt{v-if}.
 But Angular is aimed at projects with much bigger scope than mine, 
 and has a steeper learning curve \cite{angular-react-vue}.
-I chose Vue over Angular because it is more lightweight Angular \cite{vue-comparison}.
+I chose Vue over Angular because it is more lightweight than Angular \cite{vue-comparison}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Vuex}
 \hspace{-0.26in}

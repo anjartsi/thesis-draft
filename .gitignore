@@ -1,0 +1,12 @@
+# Files generate by LaTeX
+*.log
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lot
+*.lof
+*.out
+*.synctex.gz
+*.toc
