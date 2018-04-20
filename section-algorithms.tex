@@ -1,31 +1,22 @@
 \chapter{The Algorithms} 
-In this section I will discuss each of the algorithms included in the project 
-with a formal definition, reasons why I chose each algorithm, and scope and limitations for each.
+\label{the-algorithms}
 \section{Stable Marriage}
+%
 \subsection{Formal Definition}
-Given $n$ men and $n$ women with a preference list, 
-find a stable matching
-\subsection{Scope and Limitation}
-\hspace{-0.26in}
-Instances of Stable Marriage where $n > 4$ tend to be too complex to solve by hand. 
-Most in-class examples are problems with size $n = 3$.
-This AV allows for problem sizes up to $n = 14$.
-The reason behind this limit is to ensure the web page 
-does not become overly large or overly slow. 
-However, I recommend keeping the problem below $n = 6$ because that is 
-the largest problem size that will still have the preference rows fit on a single line. 
+Given $n$ men and $n$ women, 
+each with a preference list where they rank all the members of the opposite sex. 
+Find a matching with no \textit{instabilities}. 
 \newline\newline
-There are many variations of the Stable Marriage problem, for example 
-having unequal numbers of men and women,
-or having some people prefer to stay unmarried as a valid choice.
-I only covered the basic version of the Stable Marriage problem, where 
-there are an equal number of men and women, and every person must be married. 
+A \textit{matching} is a list (of length $n$) of man-woman pairs.
+An \textit{instability} occurs in a matching when 
+a man $m$ and a woman $w$ both prefer each other over the person they are currently matched with. 
+%
 \subsection{Why I chose to include this Algorithm}
 \hspace{-0.26in}
 I knew I wanted to cover Stable Marriage when I first decided on this project
 because it is taught during the first week of class.
 I gave precedence to subjects covered earlier in the semester 
-because at that is the time when students neither have a firm grasp of the subject matter 
+because that is the time when students neither have a firm grasp of the subject matter 
 nor are they used to their professor's teaching style, 
 so they are far more likely to have trouble understanding the material
 than later on in the semester. 
@@ -35,13 +26,146 @@ solve this problem on paper, which (speaking from experience) involves many iter
 writing a matching and then crossing it out. 
 Whereas having an AV tool to do the same task removes the busy work and allows 
 the user to focus on the more important aspects of the problem.
+\newline\newline
+Instances of Stable Marriage that are not trivially small ($n > 4$) 
+tend to be too complex to solve by hand 
+(you need at lest 2 $n\times n$ matrices to even represent the problem
+before even beginning to solve it). 
+So most in-class examples are problems with size $n = 3$ or $n = 2$.
+Using an AV tool would allow lecturers to discuss much more interesting cases. 
 %
+\subsection{Limitations and Scope}
+\hspace{-0.26in}
+My AV for Stable Marriage allows for problem sizes up to $n = 14$.
+The reason behind this limit is to ensure the web page 
+does not become overly large or overly slow. 
+However, I recommend keeping the problem below $n = 6$ because that is 
+the largest problem size that will still have the preference rows
+fit on a single line in the web page. 
+\newline\newline
+There are many variations of the Stable Marriage problem, such as:
+\begin{itemize}
+	\item The number of men does not need to equal the number of women.
+	\item Some people can choose to stay unmarried if they are unhappy 
+		with their current matching.
+	\item The pairs in a matching don't need to be man-woman pairs, they can be
+		pairs of any two people.
+\end{itemize} 
+My project only covers the basic version of the Stable Marriage problem, where 
+there are an equal number of men and women, and every person must be married to 
+a member of the opposite sex. \cite{textbook}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Interval Scheduling}
-\subsection{Formal Definition}
-\subsection{Scope and Limitation}
-\subsection{Why I chose to include this Algorithm}
 %
-\section{Closest Pair of Points}
 \subsection{Formal Definition}
-\subsection{Scope and Limitation}
+\hspace{-0.26in}
+Given a set of intervals $(start Time, finish Time)$, 
+find the maximum number of intervals that can be scheduled 
+without having any two intervals \textit{overlap}. 
+\newline\newline
+Two intervals are said to \textit{overlap} if one interval
+starts after the other starts, but before the other interval is finished. 
+For example, the two intervals 
+$p_A = (start_A, finish_A)$ 
+and
+$ p_B=(start_B, finish_B)$
+are said to \textit{overlap} if:
+\begin{displaymath}
+start_A < start_B < finish_A
+\end{displaymath}
+%
 \subsection{Why I chose to include this Algorithm}
+\hspace{-0.26in}
+Interval Scheduling is also taught very early on in the semester and
+is used as an introduction to Greedy Algorithm and makes for 
+a good interactive lesson. 
+During lecture, students make suggestions of possible greedy solutions
+to the problem
+(take the interval with the least number of overlaps first, etc.)
+while the professor (usually) disproves their suggested solution. 
+Oftentimes the professor has to use a counterexample to do this,
+and that is exactly where an AV tool such as my project would be useful.
+\newline\newline
+Another reason I chose Interval Scheduling was because students often 
+misunderstand the actual problem they are trying to solve.
+The Interval Scheduling problem is usually introduced as 
+"imagine you have a resource that many people want to use, 
+such as  a basketball or an opera house. 
+How can you make the largest number of people happy?"
+so many students intuitively think that they must fill up
+as much of the resource's time as possible 
+in order to make efficient use of the resource.
+Meanwhile, other students think they must fill up as little time as possible
+to avoid wear-and-tear on the resource. 
+This creates a situation where the teacher correcting the first group's
+misunderstanding only reinforces the belief of the second group and vice versa,
+but having an AV tool would better allow the teacher to demonstrate 
+what a proper solution looks like and minimize this sort of mass confusion.
+\subsection{Limitations and Scope}
+\hspace{-0.26in}
+My AV for Interval Scheduling limits the intervals' start and finish times to 
+any integer between $t=0$ and $t=30$
+in order to ensure that the display fits on the screen. 
+I also impose a maximum of $n = 200$ intervals
+to ensure the app does not slow down. 
+\newline\newline
+My project only covers Unweighted Interval Scheduling, but
+some variations of this problem are: 
+\begin{itemize}
+	\item Weighted Interval Scheduling - 
+		each interval is assigned a value, 
+		and the goal is to find a set of intervals that 
+		either maximizes or minimizes the sum of all its values
+	\item Channel Allocation - 
+		all of the given intervals must be scheduled, 
+		but intervals that overlap must be scheduled on different channels. 
+		The goal is to use as few channels as possible. 
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Closest Pair of Points}
+%
+\subsection{Formal Definition}
+\hspace{-0.26in}
+Given a set of points $(x, y)$, find the minimum distance between any pair. 
+%
+\subsection{Why I chose to include this Algorithm}
+\hspace{-0.26in}
+When discussing with my advisor about potential Divide and Conquer algorithms, 
+he suggested Closest Pair of Points. 
+This problem is easy to understand (even kids can understand what is being asked),
+but difficult to demonstrate to a class because
+drawing points on a whiteboard is both tedious and inaccurate.
+\newline\newline
+Closest Pair of Points is not a problem given on exams 
+because its instances are either trivially easy or too time-consuming and filled with
+repetitive calculations. However, it is a very useful topic to cover in lecture 
+because it provides a gateway to other Divide and Conquer algorithms. 
+There are many general concepts that are taught when teaching about
+Divide and Conquer algorithms in general, for example: 
+\begin{itemize}
+	\item When to stop dividing a problem into subproblems and instead just solve it.
+	\item How many times can a single problem be divided.
+	\item Why is the time complexity of two smaller problems smaller 
+		than the time complexity of the original problem.
+	\item What is the Time complexity of the recombining step.
+\end{itemize}
+An AV for an easy problem such as Closest Pair of Points 
+will give professors the ability to 
+explain these concepts with an example that is simple to understand.
+%
+\subsection{Limitations and Scope}
+\hspace{-0.26in}
+Variations on this problem come by either changing the space in which 
+the points exist, or the definition of distance (or both). 
+In order to keep the problem simple and easy to understand, 
+I used Euclidean distnace to measure the distance between two points, 
+because it is the most intuitive. 
+\begin{displaymath}
+d(A, B) = \sqrt{(A_x - B_x)^2 + (A_y - B_y)^2}
+\end{displaymath}
+I also limited this problem to a 2-dimensional x-y plane, with coordinates 
+ranging from $0$ to $500$ 
+(a possible alternative was to make the range between $-250$ and $250$).
+The maximum number of points allowed in a given instance is 500,
+which means that a given problem can be divided into two subproblems 
+no more than 8 times.

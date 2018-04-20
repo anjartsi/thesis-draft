@@ -104,7 +104,18 @@ const websites = [
     title: 'First Week of Launching Vue.js',
     year: 2014,
   }
+];
+
+let books = [
+  {
+    label: 'textbook',
+    author: 'Jon Kleinberk, Eva Tardos',
+    title: 'Algorithm Design',
+    publisher: 'Pearson',
+    year: 2014
+  }
 ]
+
 
 function print_journals({author, title, journal, year, label, howpublished}) {
   let arr;
@@ -124,8 +135,7 @@ function print_journals({author, title, journal, year, label, howpublished}) {
   year = { ${year || ''} },
   howpublished = { ${howpublished || ''} },
 }`
-  return str
-
+  return str;
 }
 
 function print_websites({label, howpublished, title, author, journal}) {
@@ -138,10 +148,24 @@ function print_websites({label, howpublished, title, author, journal}) {
   return str;
 }
 
+function print_book({label, author, title, publisher, year}) {
+  let str = `
+@book{ ${label || ''},
+	author = {${author}},
+  title = {${title}},
+  publisher = {${publisher}},
+	year = {${year}},
+}`
+  return str;
+}
+
 for (let i = 0; i < journals.length; i++) {
   console.log(print_journals(journals[i]));
 }
 
 for (let i = 0; i < websites.length; i++) {
   console.log(print_websites(websites[i]));
+}
+for (let i = 0; i < books.length; i++) {
+  console.log(print_book(books[i]));
 }

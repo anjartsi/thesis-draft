@@ -1,7 +1,41 @@
-\chapter{Testing}
-(in progress) \newline
-Mention the amount of testing done was limited due to time constraints
+\chapter{Testing and Validation}
+\label{testing}
+The two main goals of this project are to create an AV tool, and to create a tool 
+that would be used by lecturers in an Algorithms classroom. 
+To test for the first goal, I performed unit testing on the Data Models for 
+each of the implemented algorithms.
+To test for the second goal, I did live demonstrations of the app in front 
+of live classrooms. 
 \section{Unit Testing}
-Discuss the usefulness of unit testing and which parts of the app were tested
+\hspace{-0.26in}
+Unit tests were performed on the Data Models of each algorithm to ensure 
+that the algorithms were being implemented correctly. 
+The Vuex Store is where the Data Model is held, so each component of 
+the Vuex Store was unit tested.
+Each mutation and action in the store was tested with correct inputs as well as incorrect inputs
+to make sure that the system would handle errors correctly. 
+\newline\newline
+Since all the functionality was implemented in the Data Model, and the 
+Components simply display the data that is held in the Vuex Store, 
+no automated tests were done for the user interface, but I tested each 
+Vue Component manually to ensure it demonstrated the correct behavior. 
+This manual testing was done on the Google Chrome browser, though I do not anticipate
+any problems arising if Mozilla Firefox is used instead. 
 \section{In-Class Presentations}
-Discuss the in-class demos and how students (and Professor Noga) responded to it
+\subsection{Stable Marriage}
+\hspace{-0.26in}
+I demonstrated the Stable Marriage AV to two different sections of Professor Noga's 
+Comp 482 class. 
+The class had already been lectured about the Stable Marriage problem during the previous week, 
+so they already had a solid understanding of the problem beforehand. 
+I had a few problem instances that I had saved on my computer in advance, 
+I used those instances to discuss some subtle intricacies of the Stable Marriage problem, 
+such as:
+\begin{itemize}
+	\item In some instances the women's preference lists have no effect on the outcome
+	\item Some instance can have multiple stable matchings
+	\item Does the order in which the men propose affect the outcome?
+	\item What is the lowest number of proposals that can happen? What instance can produce that result?
+	\item What is the highest number of proposals that can happen? What instance can produce that result?
+\end{itemize} 
+These are the types of questions that are often asked on homework assignments and tests. 
