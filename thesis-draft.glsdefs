@@ -1,0 +1,30 @@
+\ifglsentryexists{algorithm}{}%
+{%
+\gls@defglossaryentry{algorithm}%
+{%
+name={Algorithm},%
+sort={Algorithm},%
+type={main},%
+first={Algorithm},%
+firstplural={Algorithms},%
+text={Algorithm},%
+plural={Algorithms},%
+description={An Algorithm},%
+descriptionplural={An Algorithm},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%

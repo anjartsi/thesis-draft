@@ -1,24 +1,26 @@
 \chapter{Introduction} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Motivation}
+\hspace{-0.26in}
 When I was a high school Math and Science teacher,
 I often tried to employ the use of technology in the classroom. 
-I often found it to be a good way to spend less class-time on tasks that do not 
-engage the student. An example of such a task is drawing a graphs (in Algebra class):
-while I was busy drawing the diagram, students would not engaged in the lesson.
+I found it to be a good way to spend less class-time on tasks that do not 
+engage the student. An example of such a task is drawing graphs in an Algebra class:
+while I was busy drawing a diagram or graph, students would not be engaged in the lesson
+and would start distracting their friends and classmates.
 \newline\newline
-So I started preparing graphs on a computer to display over a projector, and saved.
-valuable minutes of engaging class time, 
-and a side benefit of using computer-generated images was that they looked far better
-than any graph I could have drawn by hand. 
+So I started preparing graphs on a computer to display over a projector, and saved
+valuable minutes of class time for more engaging activities. 
+A side benefit of using computer-generated images is that they look far better
+than any graph I can ever draw by hand. 
 The only problem with this solution was that 
 I had to spend more of my own time outside of class to create these visuals, or find
-some online.
+them online.
 \newline\newline
 Due to my background as a teacher, 
 I was drawn towards a thesis project where I could create 
-an educational tool to be used in a classroom 
-to help instructors draw diagrams and display them 
+an educational tool to be used in a classroom. 
+I wanted to help instructors draw diagrams and display them 
 over a projector instead of having to draw them on the whiteboard.
 The overall goal of this project is to create a tool that will save time in class 
 by reducing the teacher's non-engaging tasks, while not requiring too much of the 
@@ -27,6 +29,7 @@ Algorithm Visualization.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Background}
 \label{introduction}
+\hspace{-0.26in}
 Algorithms are a fundamental part of Computer Science education. 
 Just about every introductory CS class discusses the various sorting algorithms, 
 their advantages and disadvantages, followed by some video that graphically 
@@ -41,10 +44,10 @@ and its complexity (runtime, required space, etc).
 There is an abundance of visualizations for sorting algorithms,
 and a decent amount for other introductory algorithms or data structures
 (Binary Search Trees, Linked Lists, Kruskal's Algorithm, Primm's Algorithm, etc.),
-but fairly few and far between for the more intermediate-level algorithms. 
+but AV's are fairly few and far between for the intermediate-level algorithms. 
 \newline\newline
 Studies have shown the positive effects of various AV's 
-(see {\textbf{Chapter \ref{literature-review} Literal Review}}),
+(see {\textbf{Chapter \ref{literature-review} Literature Review}}),
 and yet they are seldom used as part of the teaching process.
 AV can provide advantages to instructors because it allows them to 
 display complex diagrams or data structures without having to draw them, 
@@ -57,7 +60,7 @@ review the lesson outside of class, reproducing the problem on their own
 and giving them access to guided practice. 
 \newline\newline
 The Objectives for this project were influenced by the advantages discussed in the previous paragraph. 
-These objectives outline the goals of the project as a whole but 
+These objectives outline the goals of the project as a whole, but 
 a more detailed list of requirements can be found in
 \textbf{Chapter \ref{requirements} Requirements}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -68,7 +71,7 @@ a more detailed list of requirements can be found in
 		\begin{enumerate}
 			\item Algorithms covered by this project will be drawn from 
 				those taught in Comp 482
-			\item The main use case is on a projector display as part of a lecture
+			\item The tool will be used on a projector display as part of a lecture
 		\end{enumerate}
 	\item The tool must be intuitive and easy to use
 		\begin{enumerate}
@@ -105,9 +108,9 @@ it was designed as a web app, more precisely as a front-end single-page applicat
 		it changes the page dynamically without having to reload or refresh 
 	\item Application: computer program that accomplishes some task
 \end{itemize}
-Each algorithm within the app is a self-contained module 
-(ie does not rely on other modules) 
-comprised of 
+Each algorithm within the app is a self-contained module, so
+it does not rely on other modules.
+Each module is comprised of:
 \begin{itemize}
 	\item An \textsc{Instance Maker}: allows the user to create 
 		instances of a given problem.
@@ -117,14 +120,16 @@ comprised of
 \end{itemize} 
 I used a JavaScript framework called Vue with an MVC approach.
 I chose Vue because it is a relatively new framework and 
-its popularity is on the rise \cite{top-js-libraries}
+its popularity is on the rise \cite{top-js-libraries}.
 Furthermore, I used a popular Vue library called Vuex, which is 
-a state-management library \cite{vue}
+a state-management library \cite{vue}.
+I discuss Vue and Vuex more in-depth in
+\textbf{Chapter \ref{tools-and-technologies} Tools and Technologies}
 I hosted the app on Heroku, because they offer free hosting for hobby-level apps. 
-The app can currently be accessed by going to the following webpage:
+The app can currently be accessed by going to the following web site:
 \begin{center}
 
-https://fun-with-algorithms.herokuapp.com
+\underline{https://funwithalgorithms.herokuapp.com}
 	
 \end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -30,7 +30,7 @@ the user to focus on the more important aspects of the problem.
 Instances of Stable Marriage that are not trivially small ($n > 4$) 
 tend to be too complex to solve by hand 
 (you need at lest 2 $n\times n$ matrices to even represent the problem
-before even beginning to solve it). 
+before you begin to solve it). 
 So most in-class examples are problems with size $n = 3$ or $n = 2$.
 Using an AV tool would allow lecturers to discuss much more interesting cases. 
 %
@@ -76,23 +76,24 @@ start_A < start_B < finish_A
 %
 \subsection{Why I chose to include this Algorithm}
 \hspace{-0.26in}
-Interval Scheduling is also taught very early on in the semester and
-is used as an introduction to Greedy Algorithm and makes for 
+Interval Scheduling is also taught very early on in the semester,
+is used as an introduction to Greedy Algorithms and makes for 
 a good interactive lesson. 
 During lecture, students make suggestions of possible greedy solutions
 to the problem
-(take the interval with the least number of overlaps first, etc.)
-while the professor (usually) disproves their suggested solution. 
-Oftentimes the professor has to use a counterexample to do this,
+(take the shortest interval first, or 
+take the  interval with the least number of overlaps first, etc.)
+while the instructor (usually) disproves their suggested solution. 
+Oftentimes the instructor has to use a counterexample to do this,
 and that is exactly where an AV tool such as my project would be useful.
 \newline\newline
 Another reason I chose Interval Scheduling was because students often 
 misunderstand the actual problem they are trying to solve.
 The Interval Scheduling problem is usually introduced as 
-"imagine you have a resource that many people want to use, 
+``imagine you have a resource that many people want to use, 
 such as  a basketball or an opera house. 
 How can you make the largest number of people happy?"
-so many students intuitively think that they must fill up
+and many students intuitively think that they must fill up
 as much of the resource's time as possible 
 in order to make efficient use of the resource.
 Meanwhile, other students think they must fill up as little time as possible
@@ -107,7 +108,8 @@ My AV for Interval Scheduling limits the intervals' start and finish times to
 any integer between $t=0$ and $t=30$
 in order to ensure that the display fits on the screen. 
 I also impose a maximum of $n = 200$ intervals
-to ensure the app does not slow down. 
+to ensure the app does not slow down, though I don't see any 
+example being used with more than 50 intervals. 
 \newline\newline
 My project only covers Unweighted Interval Scheduling, but
 some variations of this problem are: 
@@ -166,6 +168,6 @@ d(A, B) = \sqrt{(A_x - B_x)^2 + (A_y - B_y)^2}
 I also limited this problem to a 2-dimensional x-y plane, with coordinates 
 ranging from $0$ to $500$ 
 (a possible alternative was to make the range between $-250$ and $250$).
-The maximum number of points allowed in a given instance is 500,
+The maximum number of points allowed in a given instance is 200,
 which means that a given problem can be divided into two subproblems 
-no more than 8 times.
+no more than 7 times.

@@ -1,8 +1,52 @@
 \chapter{Conclusions and Future Work}
-I am overall pleased with the result of this project, though it is far from complete. 
-For future work, I would like to implement more problems, as well as create 
-more generic tools that can be useful in the classroom. 
-One such tool would be a graph builder: a tool that would help users draw 
-graphs (directed or undirected) in an effortless way. 
+Algorithm Visualization is an educationally effective method of teaching
+how algorithms work. But educators tend to stick with the method they're used to: 
+drawing diagrams on the whiteboard. 
+Using AV's would save in-class time for discussion,  
+produces higher-quality diagrams,
+and is reproducible outside of the classroom.
 \newline\newline
-
+The goal of this project was to create an Algorithm Visualization tool to be used 
+by lecturers to simplify the task of drawing complex diagrams. 
+The tool is front-end web application that can be accessed by going to 
+\underline{https://www.funwithalgorithms.com/}
+\newline\newline
+I chose three algorithms taught in CSUN's Comp 482 class:
+Stable Marriage, 
+Interval Scheduling, 
+and Closest Pair of Points.
+Each AV consists of three main components:
+an \textsc{Instance Maker}, 
+a \textsc{Display},
+and a \textsc{Solver}. 
+The \textsc{Instance Maker} allows users to 
+create instances of a given problem by interacting with the page. 
+The \textsc{Display} shows diagrams depicting the various 
+properties of the instance. 
+The \textsc{Solver} runs the algorithm step by step, 
+modifying the \textsc{Display} in the process. 
+\newline\newline
+One of the biggest challenges of this project was 
+separating responsibilities among the various components 
+in an organized manner. 
+Vue.js was used to keep isolate responsibilities into components, 
+and Vuex was used to create an organized way for the components 
+to communicate with each other. 
+\newline\newline
+There are plenty of opportunities to build upon this project, 
+the most obvious of which is to add more AV's for different algorithms 
+(the home page of the app lists quite a few good candidates). 
+In an ideal scenario, the app would have an AV for each major 
+algorithm covered in an entire course. 
+\newline\newline
+Aside from adding more AV, this project can be built-upon 
+by adding more features to each AV itself for either functionality or 
+to create a more fluid user interface. 
+For example, the Stable Marriage AV could have a section where
+the user (after creating the instance) checks to see whether a 
+matching is stable. 
+The Interval Scheduling could allow the user to reorder the 
+intervals into different rows.
+The Closest Pair of Points could allow the user to zoom in or 
+out of the problem tree, and have a mini map to show them 
+which part of the tree they are looking at. 

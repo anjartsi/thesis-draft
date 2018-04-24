@@ -1,9 +1,11 @@
 \documentclass[draftcls, 11pt, project]{CSUNthesis}
-% thesiscls
+% final or drafcls
 
 % For code snippets
 \include{listings-package}
 \usepackage{graphicx}
+\usepackage{float}
+\usepackage{array}
 
 \title{Fun With Algorithms}
 \author{Armen Ourfalian}
@@ -11,6 +13,12 @@
 \committee{John Noga, Ph.D}		{Jeff Wiegley, Ph.D}		{Kyle Dewey, Ph.D}
 \degree { Master of Science }{ Computer Science}
 \abstract{\input{section-abstract}}
+
+%\DeclareOption{lof}{\loftrue}
+
+
+%\defense {Tuesday}{May 8th}{12:00 noon}{JD 3508}
+
 \begin{document}
 
 \input{section-introduction}
@@ -19,14 +27,14 @@
 \input{section-development-process}
 \input{section-algorithms}
 %\input{section-design}
-%\input{section-testing}
+\input{section-testing}
 \input{section-guide}
 \input{section-tools-and-technologies}
 \input{section-conclusions}
 %\input{section-sources}
-\input{section-appendices}
 
 \references{plain}{references}
-
+\appendix
+\input{section-appendices}
 
 \end{document}

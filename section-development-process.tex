@@ -51,7 +51,7 @@ The first part of creating each AV is creating the data model.
 The data model consists of 
 data structures (arrays, maps, lists, etc.)
 that represent an instance of the problem, 
-and functions that mutate those data structures as an algorithms is being performed. 
+and functions that mutate those data structures as an algorithm is being performed. 
 Although most problem instances can be represented with just one or two data structures, 
 the data model of an AV also includes other data structures that 
 provide different perspectives of the instance and others that are necessary for the solver.
@@ -61,8 +61,10 @@ For example, the Stable Marriage data model includes:
 	\item A list of $length \leq n$ that shows Tentative Matches, 
 	\item Two lists of $length \leq n$ that show any people who are currently unmatched. 
 \end{itemize}
-The only \textit{necessary} data structure in the above list is the first two, 
-but the third one provides utility that makes the code easier to write and follow.
+Of the three data structures listed above, the first one is absolutely necessary for 
+representing the problem instance, 
+and one of the other two is necessary for the solver, but having all three
+provides utility that makes the code easier to write and follow.
 \newline\newline
 Since this project focuses on AV's to be used in lecture, 
 the problem instances don't become large enough for 
@@ -72,7 +74,7 @@ And since the app is programmed in JavaScript,
 a language with weak typing (almost no typing), most of the data structures 
 consisted of either arrays or objects.
 %
-\section{The \textsc{Instance Maker} and Save/Load}
+\section{The \textsc{Instance Maker}}
 \hspace{-0.26in}
 The Instance Maker of an AV consists of all the parts of the user interface 
 that allow the user to create and edit instances of the given problem. 
@@ -99,7 +101,8 @@ the following functionalities:
 \end{itemize}
 A few of the more specific Instance Maker components will be discussed in \textbf{Chapter \ref{guide} Guide}.
 \newline\newline
-The last step in creating the Instance Maker is the Save/Load specified in 
+The last step in creating the Instance Maker is the 
+Save/Load functionality specified in 
 Requirements \ref{req-load} and \ref{req-save}.
 The Save/Load feature converts the most important parts of the Data Model into text. 
 The purpose of the Save/Load feature is 
@@ -121,7 +124,7 @@ to be able to interact with the diagrams.
 Oftentimes the line between the Instance Maker and the Display gets blurred, 
 and they become a single entity. 
 Furthermore, the Display also needs to be developed in parallel to the 
-Solver (see below) because it needs to react to the Solver and 
+Solver because it needs to react to the Solver and 
 update as an algorithm is being performed (see Figure \ref{fig-develpoment-process-timing}). 
 \newline\newline
 Creating the Display means taking the most interesting parts of the Data Model and 
@@ -141,16 +144,19 @@ It is important to determine what constitutes a single ``step'' in the Solver,
 where a step corresponds with a single action by the user. 
 Having each step be too small would force the lecturer to spend more time 
 interacting with the Solver than their own students, while having each step be 
-too small would give the students a hard time understanding what's going on. 
+too large would mean that the students will have a hard time 
+understanding what's going on. 
 An appropriate size for each step is one or two lines of the algorithm's pseudocode.
-\newline\newline
-The reason why the Solver is the hardest part of the development process is because
-its accuracy is extremely important. 
-Having the Solver produce an incorrect result would completely negate 
-any benefits of the entire app.
-%See \textbf{Chapter \ref{testing} Testing and Validation} for more information about testing.
 \newline\newline
 Although the actions of the Solver are represented in the Display, it is often 
 useful for the Solver to provide a second form of feedback through messages. 
 These messages often narrate what is being done with each user interaction, 
 and their language is similar to the pseudocode of the algorithm. 
+\newline\newline
+The reason why the Solver is the hardest part of the development process is because
+its accuracy is extremely important. 
+Having the Solver produce an incorrect result would completely negate 
+any benefits of the entire app.
+For this reason I spent a large portion of my time validating the results
+of the Solver before I moved on to the next algorithm. 
+
