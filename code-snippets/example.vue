@@ -1,11 +1,9 @@
 <template>
   <div>
     <h1>Example Vue Component</h1>
-    <div>
       <p> {{num}} </p>
       <button @click='increment'> Plus One</button>
       <button @click='decrement'> Minus One</button>
-    </div>
   </div>
 </template>
 
@@ -29,6 +27,7 @@ export default {
 
 <style scoped>
   div {
+    text-align: center;
     border: 1px solid black;
   }
 </style>
