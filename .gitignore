@@ -10,6 +10,8 @@
 *.out
 *.synctex.gz
 *.toc
+*.dvi
+thesis-draft.pdf
 
 # VS Code folder
 .vscode/
